@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
+import TrafficLight from './TrafficLight';
 
 test('renders buttons in App.js', () => {
   render(<App />);
@@ -8,6 +9,17 @@ test('renders buttons in App.js', () => {
   expect(buttonArray.length).toBe(11);
   expect(buttonArray[1].textContent).toBe('Amazing! The alien zapped the lizard!');
 });
+
+
+test('renders bright green after green button click', () => {
+  render(<TrafficLight /*color={lightColor}*/ />);
+
+  const greenDiv = screen.getByTitle('green-div');
+  expect(greenDiv).toBeInTheDocument();
+  expect(greenDiv).toHaveClass('green');
+});
+
+
 
 // test('renders an incremented alien size on setAlienSize click', () => {
 //   render(<App />);

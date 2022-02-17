@@ -10,7 +10,7 @@ export default function TrafficLight(props) {
       {/* the css classes for the div below should be `yellow circle on`, if props.color is 'yellow' */}
       <div className={props.color === 'yellow' ? 'yellow circle on' : 'yellow circle'}></div>
       {/*  the css classes for the div below should be `green circle on`, if props.color is 'green' */}
-      <div className={props.color === 'green' ? 'green circle on' : 'green circle'}></div>
+      <div className={props.color === 'green' ? 'green circle on' : 'green circle'} title='green-div'></div>
     </div>
   );
 }
