@@ -23,7 +23,7 @@ function App() {
       <div className="fight">
         <div className="monster">
           {/* the width of the alien should be ten times whatever the alien size is in state */}
-          <img src="alien.png" width={10 * alienSize} />
+          <img src="alien.png" width={10 * alienSize} alt="alien image"/>
           <div className='buttons'>
             {/* when you click this button, the alien's size in state should go up by one */}
             <button onClick={() => setAlienSize(alienSize + 1)}>Oh no! The alien is gobblin up all the electricity!</button>
