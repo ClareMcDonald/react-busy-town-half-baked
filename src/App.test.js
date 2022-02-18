@@ -17,9 +17,17 @@ test('renders bright green after green button click', () => {
   const greenDiv = screen.getByTitle('green-div');
   expect(greenDiv).toBeInTheDocument();
   expect(greenDiv).toHaveClass('green');
+
 });
 
+test('renders a bus on click', async () => {
+  render(<App />);
 
+  const busButton = screen.getByRole('button', { name: 'Bus' });
+  fireEvent.click(busButton);
+  const emojiEl = await screen.findByText('🚌');
+  expect(emojiEl.textContent).toBe('🚌');
+});
 
 // test('renders an incremented alien size on setAlienSize click', () => {
 //   render(<App />);
