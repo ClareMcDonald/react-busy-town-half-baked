@@ -26,7 +26,7 @@ function App() {
           <img src="alien.png" width={10 * alienSize} alt="alien image"/>
           <div className='buttons'>
             {/* when you click this button, the alien's size in state should go up by one */}
-            <button onClick={() => setAlienSize(alienSize + 1)}>Oh no! The alien is gobblin up all the electricity!</button>
+            <button role="alien-button" onClick={() => setAlienSize(alienSize + 1)}>Oh no! The alien is gobblin up all the electricity!</button>
             {/* when you click this button, the lizard's size in state should go down by one */}
             <button onClick={() => setLizardSize(lizardSize - 1)}>Amazing! The alien zapped the lizard!</button>
           </div>
